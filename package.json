@@ -2,7 +2,8 @@
   "name": "caselas",
   "version": "0.0.1",
   "dependencies": {
-    "express": "2.5.x"
+    "express": "2.5.x",
+    "coffee-script": "1.6.x"
   },
   "engines": {
     "node": "0.10.x",
