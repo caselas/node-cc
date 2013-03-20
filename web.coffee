@@ -1,7 +1,8 @@
 # Require Node Modules
 express = require 'express'
 jade    = require 'jade'
-sass    = require 'node-sass'
+stylus  = require 'stylus'
+nib     = require 'nib'
 
 # Create New Application
 app = module.exports = express()
@@ -14,11 +15,13 @@ app.configure ->
     layout: false
   app.use express.bodyParser()
   app.use express.methodOverride()
-  app.use sass.middleware(
-    src: __dirname
-    dest: __dirname
-    debug: true
-  )
+  app.use stylus.middleware
+    src: __dirname + '/public'
+    compile: (str, path) ->
+      stylus(str)
+      .set('filename', path)
+      .set('compress', true)
+      .use(nib())
   app.use express.static(__dirname + '/public')
 
 
