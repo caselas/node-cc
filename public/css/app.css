@@ -1,1 +1,2 @@
-body{font:14px/1em Futura,Arial,sans-serif;color:#333;background:#eee}
+html,body{width:100%;min-height:100%;margin:0;padding:0}
+body{font:14px/1em Futura,Arial,sans-serif;color:#333;background:#eee;background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(1, #fff));background:-webkit-linear-gradient(top, #eee 0%, #fff 100%);background:-moz-linear-gradient(top, #eee 0%, #fff 100%);background:-o-linear-gradient(top, #eee 0%, #fff 100%);background:-ms-linear-gradient(top, #eee 0%, #fff 100%);background:linear-gradient(top, #eee 0%, #fff 100%)}
