@@ -1,11 +1,13 @@
 # Require Node Modules
 express = require 'express'
+http    = require 'http'
 jade    = require 'jade'
 stylus  = require 'stylus'
 nib     = require 'nib'
 
 # Create New Application
-app = module.exports = express()
+app    = module.exports = express()
+server = http.createServer(app)
 
 # Configure Express App
 app.configure ->
@@ -30,5 +32,5 @@ app.get "/", (request, response) ->
   response.render 'index'
 
 # Listen for Connections
-app.listen app.settings.port, ->
+server.listen app.settings.port, ->
   console.log "Listening on " + app.settings.port
