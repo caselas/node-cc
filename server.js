@@ -17,7 +17,7 @@
   server = http.createServer(app);
 
   app.configure(function() {
-    app.set('port', process.env.PORT || 5000);
+    app.set('port', process.env.PORT || 80);
     app.set('view engine', 'jade');
     app.set('view options', {
       layout: false
