@@ -11,7 +11,7 @@ server = http.createServer(app)
 
 # Configure Express App
 app.configure ->
-  app.set 'port', process.env.PORT || 5000
+  app.set 'port', process.env.PORT || 80
   app.set 'view engine', 'jade'
   app.set 'view options',
     layout: false
